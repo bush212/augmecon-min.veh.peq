@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<title>Reporte - Reporte MIP (E-constraint: min #veh, distancia ≤ ε)</title>
+<style>
+body {font-family:Segoe UI, Arial, sans-serif;background:#f6f8fb;margin:0}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.card{background:#fff;margin:16px 0;padding:20px;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.badge-ok{color:#2ecc71;font-weight:bold} .badge-warn{color:#e74c3c;font-weight:bold}
+table{border-collapse:collapse;width:100%} th,td{padding:8px 10px;border-bottom:1px solid #eee;text-align:left}
+th{background:#fafafa}
+.code{font-family:ui-monospace,Consolas,monospace;color:#555}
+</style></head><body><div class="container">
+<div class="card"><h1 style="margin:0">Reporte MIP (E-constraint: min #veh, distancia ≤ ε)</h1>
+<p style="margin:.25rem 0">Generado: 09/12/2025 17:31</p>
+<p style="margin:.25rem 0"><strong>Método:</strong> E-constraint (AUGMECON) — min #veh con tope de distancia</p>
+<p style="margin:.25rem 0"><em>min #vehículos  s.a.  distancia ≤ ε  + término lexicográfico con slack_d/R_dist (sin normalizar f1 ni f2).</em></p>
+<p style="margin:.25rem 0"><em>Tiempos de calle ×1.40</em></p>
+
+<div class='card'><h2 style='margin-top:0'>Payoff</h2>
+<table>
+<tr><th>Óptimo</th><th>#veh</th><th>Dist (km)</th></tr>
+<tr><td>Min #veh (lex)</td><td>2</td><td>51.6</td></tr>
+<tr><td>Min distancia (lex)</td><td>2</td><td>51.6</td></tr>
+</table></div><div class='card'><h2 style='margin-top:0'>E-constraint</h2><p><strong>ε (tope distancia, km de la corrida puntual):</strong> 90.0</p><p><strong>Resultado puntual:</strong> #veh=2, distancia=51.6 km</p><p><strong>Runtime (corrida puntual ε=90.0 km):</strong> 0.38 s</p></div><div class='card'><h2 style='margin-top:0'>Frontera (ε sweep, AUGMECON)</h2><p>CSV: <span class='code'>resultados_santiago\mip\frontera_epsilon_2025-12-09_17-29-29.csv</span></p><p>PNG rápido: <span class='code'>resultados_santiago\mip\frontera_epsilon_2025-12-09_17-29-29.png</span></p><p><strong>Selección usada (min #veh):</strong> ε*=51.6 km, #veh=2, dist=51.6 km</p><div style='margin-top:12px'><img src='pareto_epsilon_2025-12-09_17-29-29.png' style='max-width:100%;border-radius:12px;box-shadow:0 3px 14px rgba(0,0,0,.08)' alt='Pareto ε (distancia vs vehículos)'></div></div>
+</div>
+<div class="card"><h2 style="margin-top:0">Resumen</h2>
+<p><strong>Trabajadores:</strong> 6 | <strong>Vehículos usados:</strong> 2</p>
+<p><strong>Distancia total recorrida:</strong> 51.6 km</p>
+<p><strong>Tiempo total (suma de rutas):</strong> 88.2 min</p>
+<p><strong>Tiempo máximo de ruta:</strong> 53.1 min (horizonte 60 min)</p>
+<p><strong>Rutas que exceden el horizonte:</strong> 0 de 2</p>
+<p><strong>Tiempo promedio por ruta:</strong> 44.1 min</p>
+<p><strong>Eficiencia global (ocupación de capacidad):</strong> 37.5%</p>
+</div>
+<div class='card'><h2 style='margin-top:0'>Resumen por vehículo (tabla rápida)</h2><table><tr><th>Vehículo</th><th>Tipo</th><th>Paradas hogar</th><th>Distancia (km)</th><th>Tiempo (min)</th><th>Estado horizonte</th></tr><tr><td>🚌 V146</td><td>Mediano</td><td>4</td><td>20.3</td><td>35.1</td><td>OK</td></tr><tr><td>🚌 V408</td><td>Mediano</td><td>2</td><td>31.3</td><td>53.1</td><td>OK</td></tr></table></div>
+<div class="card"><h2 style="margin-top:0">Mapa</h2>
+<iframe src="mapa_2025-12-09_17-29-29.html" width="100%" height="520" frameborder="0"></iframe></div>
+<div class="card"><h2 style="margin-top:0">Detalle por vehículo</h2>
+
+<div class="card" style="border-left:6px solid #1f77b4">
+<h3 style="margin:0">🚌 V146 — Mediano (cap: 8)</h3>
+<p><strong>Hogares:</strong> 4 | <strong>Estaciones:</strong> VICENTE VALDES → VICUÑA MACKENNA</p>
+<p><strong>Tiempo total de ruta (calle):</strong> 35.1 min <span class='badge-ok'>OK 60 min</span> | <strong>Distancia:</strong> 20.3 km</p>
+<p><strong>Orden hogares:</strong></p><ul><li>Parada 1: Trabajador 1 (ID 1) — t(calle): <strong>0.0 min</strong> — Metro objetivo: VICENTE VALDES</li><li>Parada 2: Trabajador 2 (ID 2) — t(calle): <strong>6.5 min</strong> — Metro objetivo: VICENTE VALDES</li><li>Parada 3: Trabajador 3 (ID 3) — t(calle): <strong>9.9 min</strong> — Metro objetivo: VICUÑA MACKENNA</li><li>Parada 4: Trabajador 4 (ID 4) — t(calle): <strong>12.3 min</strong> — Metro objetivo: VICUÑA MACKENNA</li></ul>
+<p><strong>Orden metros:</strong></p><ul><li>Metro 1: <strong>VICENTE VALDES</strong> — t(calle): <strong>33.2 min</strong></li><li>Metro 2: <strong>VICUÑA MACKENNA</strong> — t(calle): <strong>35.1 min</strong></li></ul>
+<iframe src="mapa_V146_2025-12-09_17-29-29.html" width="100%" height="360" frameborder="0"></iframe>
+</div>
+<div class="card" style="border-left:6px solid #aec7e8">
+<h3 style="margin:0">🚌 V408 — Mediano (cap: 8)</h3>
+<p><strong>Hogares:</strong> 2 | <strong>Estaciones:</strong> CRISTOBAL COLON → TOBALABA L1</p>
+<p><strong>Tiempo total de ruta (calle):</strong> 53.1 min <span class='badge-ok'>OK 60 min</span> | <strong>Distancia:</strong> 31.3 km</p>
+<p><strong>Orden hogares:</strong></p><ul><li>Parada 1: Trabajador 6 (ID 6) — t(calle): <strong>0.0 min</strong> — Metro objetivo: TOBALABA L1</li><li>Parada 2: Trabajador 5 (ID 5) — t(calle): <strong>37.1 min</strong> — Metro objetivo: CRISTOBAL COLON</li></ul>
+<p><strong>Orden metros:</strong></p><ul><li>Metro 1: <strong>CRISTOBAL COLON</strong> — t(calle): <strong>50.5 min</strong></li><li>Metro 2: <strong>TOBALABA L1</strong> — t(calle): <strong>53.1 min</strong></li></ul>
+<iframe src="mapa_V408_2025-12-09_17-29-29.html" width="100%" height="360" frameborder="0"></iframe>
+</div></div></body></html>
